@@ -1,10 +1,11 @@
 #include <iostream>
-//#include <fstream>
+#include <fstream>
 using namespace std;
 
 int main(){
-	ofstream out("HelloWorld.txt", ios::trunc); 
-	//cout<<"Hello World"<<endl;
-	out.close();
+	ofstream outfile;
+	outfile.open("HelloWorld.txt", ios::trunc); 
+	out<<"Hello World"<<endl;
+	outfile.close();
 	return 0;
 }
