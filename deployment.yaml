@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: project1-deployment
+  namespace: jenkins
+  labels:
+    app: k8s-project1
+spec:
+  selector:
+    matchLabels:
+      app: project
+  template:
+    metadata:
+      labels:
+        app: project
+    spec:
+      containers:
+        - name: project1-conteiner
+          image: peshinaa/project1:latest
